@@ -1,4 +1,6 @@
 import time
+from abc import ABC
+
 import numpy as np
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.neural_network import MLPRegressor
@@ -8,23 +10,14 @@ from project.project.Graphic import Graphic
 
 class MLPRegressorModel(GeneralFunction):
 
-    def __create_new_window__(self, x_test, y_predict):
-        return super().__create_new_window__(x_test, y_predict)
-
-    def compute_windows(self, x_train_aux, n_past=20):
-        return super().compute_windows(x_train_aux, n_past)
+    def create_variable_for_model(self, player, windows_size=13):
+        return super().create_variable_for_model(player, windows_size)
 
     def __init__(self):
         self.__graphic__ = Graphic()
 
-    def __create_variable_for_model(self, player, windows_size=13):
-        windows, player_vote = self.compute_windows(player, windows_size)
-        x, y = windows[:int(len(windows) * 0.8)], windows[int(len(windows) * 0.8):]
-        return x, player_vote[:int(len(player_vote) * 0.8)], y, player_vote[
-                                                                int(len(player_vote) * 0.8):]
-
     def start(self, player, name_player):
-        new_x, target_x, new_y, target_y = self.__create_variable_for_model(player)
+        new_x, target_x, new_y, target_y = self.create_variable_for_model(player)
         model = self.__create_model__(len(target_x))
         self.__train__(model, new_x, target_x, new_y, target_y)
         y_predict = self.__test__(model, new_x[new_x.shape[0] - 1, :].reshape(1, -1),

@@ -7,6 +7,9 @@ from project.modelmissingvalues.SVRRegression import SVRRegression
 from project.database.SqlLiteDatabase import SqlLiteDatabase
 from common.ThreadPool import ThreadPool
 
+from project.project.ProcessPlayer import ProcessPlayer
+from project.project.SearchBestModel import SearchBestModel
+
 
 def __define_dataframe_for_year__(votes, years, days):
     return pd.DataFrame({'vote': pd.Series(votes, dtype='float'),
@@ -18,7 +21,7 @@ class PlayerOperation:
     __total_day__: int = 38
 
     def __init__(self, path, name_table, name_player, name_team):
-        self.__all_model__ = ['Sarima', 'Arima', 'MLP', 'LSTM', 'Keras']
+        self.__all_model__ = ['Sarima', 'Arima', 'MLP', 'LSTM', 'Keras', 'DecisionTree', 'RandomForest', 'SVR']
         self.__sql_operation = SqlLiteDatabase(path, name_table)
         self.__name_player__ = name_player
         self.__name_team__ = name_team
@@ -86,13 +89,6 @@ class PlayerOperation:
             default_df.loc[int(index), :] = final_df.loc[index, :]
         return default_df.values
 
-    def __continuation_operation__(self, new_info_without_fill_hole, name_player) -> list:
-        all_process = []
-        for model in self.__all_model__:
-            all_process.append(ThreadPool.get_pool().apply_async(self.__predictive_operation.start,
-                                                                 (new_info_without_fill_hole, name_player, model)))
-        return all_process
-
     @staticmethod
     def __fill_nan_values_with_df_method__(series_player):
         return series_player.fillna(method='ffill').values.reshape(-1, 1)
@@ -107,13 +103,20 @@ class PlayerOperation:
         self.__start_all_process__(all_player, player_with_min_vote)
 
     def __start_all_process__(self, all_player, player_with_min_vote):
+        name_player_more_info =player_with_min_vote.loc[0,'name_player']
         all_process = self.__start_process_filling_data__(all_player, player_with_min_vote)
+        process_grids = []
         all_process_model = []
         for process, name_player in all_process:
             process.wait()
-            all_process_model.append(self.__continuation_operation__(process.get(), name_player))
-        [final_process.wait() for process_for_player in all_process_model for final_process in process_for_player]
-        print(123)
+            if name_player_more_info == name_player:
+                process_grids = SearchBestModel().start(process.get(), name_player)
+            ProcessPlayer.append_player(process.get(), name_player)
+
+        for process_grid, model in process_grids:
+            process_grid.wait()
+            #all_process_model = ProcessPlayer.process_all_player_in_models(model)
+        #[final_process.wait() for process_for_player in all_process_model for final_process in process_for_player]
 
     @staticmethod
     def __sharpe_calculus__(all_player, player_with_min_vote):

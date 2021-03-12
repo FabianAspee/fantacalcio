@@ -47,7 +47,8 @@ class ArimaModel:
         metrics = self.__forecast_accuracy__(forecasts, test.reshape(-1, ))
         return {'model': s_model, 'rmse': metrics['rmse'], 'x_predict': x_predict}, forecasts, confint
 
-    def __forecast_accuracy__(self, forecast, actual):
+    @staticmethod
+    def __forecast_accuracy__(forecast, actual):
         mape = np.mean(np.abs(forecast - actual) / np.abs(actual))  # MAPE
         me = np.mean(forecast - actual)  # ME
         mae = np.mean(np.abs(forecast - actual))  # MAE

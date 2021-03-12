@@ -1,6 +1,7 @@
 from multiprocessing import Pool
 import os
 
+
 class ThreadPool:
     __instance = None
 

@@ -38,7 +38,7 @@ def __select_player_play_in_this_session__() -> str:
 def __select_player_with_min_vote__(min_votes: int) -> str:
     return f'SELECT name_player,count() as cnt FROM player_info WHERE name_player in ( SELECT name_player FROM ' \
            f'player_info WHERE year = "2020-20" GROUP BY name_player) group by name_player HAVING' \
-           f' cnt > {str(min_votes)} ORDER BY name_player '
+           f' cnt > {str(min_votes)} ORDER BY cnt DESC'
 
 
 def __select_story_series_team__(teams_name: str) -> str:
@@ -149,3 +149,6 @@ class SqlLiteDatabase:
 
     def read_player_with_min_votes(self, min_vote=10) -> DataFrame:
         return self.__read_sql_lite_with_sql_alchemy__(__select_player_with_min_vote__(min_vote))
+
+    def save_prediction_and_std_for_player(self, prediction, std):
+        pass

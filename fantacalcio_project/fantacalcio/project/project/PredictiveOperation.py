@@ -1,12 +1,13 @@
-from statsmodels.sandbox.tsa.movstat import movmean
-
-from models.ArimaModel import ArimaModel
 from common.CommonFunction import CommonFunction
+from models.ArimaModel import ArimaModel
 from models.KerasRegressorModel import KerasRegressorModel
 from models.LSTMModel import LSTMModel
 from models.MLPRegressorModel import MLPRegressorModel
-from common.ThreadPool import ThreadPool
+from models.DecisionTreeRegressorModel import DecisionTreeRegressorModel
+from models.RandomForestRegressorModel import RandomForestRegressorModel
+from models.SVRModel import SVRModel
 from models.SarimaModel import SarimaModel
+from statsmodels.sandbox.tsa.movstat import movmean
 
 
 class PredictiveOperation:
@@ -31,6 +32,17 @@ class PredictiveOperation:
 
         elif self.__model__ == 'Keras':
             self.__start_regressor__(KerasRegressorModel, self.__standardize__(self.mov_mean(player)), name_player)
+
+        elif self.__model__ == 'DecisionTree':
+            self.__start_regressor__(DecisionTreeRegressorModel, self.__standardize__(self.mov_mean(player)),
+                                     name_player)
+
+        elif self.__model__ == 'RandomForest':
+            self.__start_regressor__(RandomForestRegressorModel, self.__standardize__(self.mov_mean(player)),
+                                     name_player)
+
+        elif self.__model__ == 'SVR':
+            self.__start_regressor__(SVRModel, self.__standardize__(self.mov_mean(player)), name_player)
 
     @staticmethod
     def __start_regressor__(class_execute, player, name_player):
