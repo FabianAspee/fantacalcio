@@ -1,0 +1,542 @@
+,0
+0,ARESTI : P : Cagliari : 1
+1,AUDERO : P : Sampdoria : 9
+2,BAGHERIA : P : Parma : 1
+3,BARDI : P : Frosinone : 1
+4,BELEC : P : Sampdoria : 1
+5,BERISHA E : P : Atalanta : 12
+6,BERNI : P : Inter : 1
+7,CONSIGLI : P : Sassuolo : 9
+8,CRAGNO : P : Cagliari : 8
+9,DA COSTA : P : Bologna : 1
+10,DONNARUMMA A : P : Milan : 1
+11,DONNARUMMA G : P : Milan : 12
+12,DRAGOWSKI : P : Fiorentina : 1
+13,FRATTALI : P : Parma : 1
+14,FULIGNATI : P : Empoli : 1
+15,FUZATO : P : Roma : 1
+16,GHIDOTTI : P : Fiorentina : 1
+17,GOLLINI : P : Atalanta : 1
+18,GOMIS A : P : SPAL : 1
+19,GUERRIERI : P : Lazio : 1
+20,HANDANOVIC : P : Inter : 16
+21,IACOBUCCI : P : Frosinone : 1
+22,ICHAZO : P : Torino : 1
+23,KARNEZIS : P : Napoli : 1
+24,LAFONT : P : Fiorentina : 10
+25,MARCHETTI : P : Genoa : 10
+26,MERET : P : Napoli : 14
+27,MILINKOVIC-SAVIC V : P : SPAL : 8
+28,MIRANTE : P : Roma : 1
+29,MUSSO : P : Udinese : 8
+30,NICOLAS : P : Udinese : 1
+31,OLSEN : P : Roma : 14
+32,OSPINA : P : Napoli : 1
+33,PADELLI : P : Inter : 1
+34,PEGOLO : P : Sassuolo : 1
+35,PERIN : P : Juventus : 1
+36,PINSOGLIO : P : Juventus : 1
+37,PLIZZARI : P : Milan : 1
+38,POLUZZI : P : SPAL : 1
+39,PROTO : P : Lazio : 1
+40,PROVEDEL : P : Empoli : 6
+41,RADU I : P : Genoa : 1
+42,RAFAEL : P : Cagliari : 1
+43,RAFAEL CABRAL : P : Sampdoria : 1
+44,REINA : P : Milan : 1
+45,ROSATI : P : Torino : 1
+46,ROSSI F : P : Atalanta : 1
+47,SANTURRO : P : Bologna : 1
+48,SATALINO : P : Sassuolo : 1
+49,SCUFFET : P : Udinese : 1
+50,SECULIN : P : Chievo : 1
+51,SEMPER : P : Chievo : 1
+52,SEPE : P : Parma : 6
+53,SIRIGU : P : Torino : 11
+54,SKORUPSKI : P : Bologna : 9
+55,SORRENTINO : P : Chievo : 9
+56,SPORTIELLO : P : Frosinone : 6
+57,STRAKOSHA : P : Lazio : 12
+58,SZCZESNY : P : Juventus : 18
+59,TERRACCIANO : P : Empoli : 1
+60,VODISEK : P : Genoa : 1
+61,ABATE : D : Milan : 3
+62,ACERBI : D : Lazio : 12
+63,ADJAPONG : D : Sassuolo : 3
+64,ADNAN : D : Atalanta : 3
+65,AINA : D : Torino : 4
+66,ALBIOL : D : Napoli : 13
+67,ALEX SANDRO : D : Juventus : 17
+68,ANDERSEN : D : Sampdoria : 6
+69,ANDREOLLI : D : Cagliari : 4
+70,ANSALDI : D : Torino : 11
+71,ANTONELLI : D : Empoli : 4
+72,ARIAUDO : D : Frosinone : 4
+73,ASAMOAH : D : Inter : 9
+74,BANI : D : Chievo : 6
+75,BARBA : D : Chievo : 4
+76,BARZAGLI : D : Juventus : 3
+77,BASTA : D : Lazio : 3
+78,BASTONI : D : Parma : 1
+79,BASTOS : D : Lazio : 8
+80,BENATIA : D : Juventus : 10
+81,BERESZYNSKI : D : Sampdoria : 7
+82,BETTELLA : D : Atalanta : 1
+83,BIANDA : D : Roma : 1
+84,BIRAGHI : D : Fiorentina : 6
+85,BIRASCHI : D : Genoa : 6
+86,BONIFAZI : D : SPAL : 3
+87,BONUCCI : D : Juventus : 12
+88,BREMER : D : Torino : 4
+89,BRIGHENTI : D : Frosinone : 2
+90,BRUNO ALVES : D : Parma : 5
+91,CACCIATORE : D : Chievo : 7
+92,CACERES : D : Lazio : 5
+93,CALABRESI : D : Bologna : 1
+94,CALABRIA : D : Milan : 6
+95,CALDARA : D : Milan : 12
+96,CANCELO : D : Juventus : 14
+97,CAPUANO : D : Frosinone : 5
+98,CASTAGNE : D : Atalanta : 6
+99,CECCHERINI : D : Fiorentina : 6
+100,CEPPITELLI : D : Cagliari : 8
+101,CESAR : D : Chievo : 1
+102,CHIELLINI : D : Juventus : 12
+103,CHIRICHES : D : Napoli : 3
+104,CIONEK : D : SPAL : 9
+105,COLLEY : D : Sampdoria : 7
+106,CONTI : D : Milan : 7
+107,COSTA F : D : SPAL : 4
+108,CRISCITO : D : Genoa : 9
+109,DALBERT : D : Inter : 3
+110,D'AMBROSIO : D : Inter : 8
+111,DANILO : D : Bologna : 8
+112,DE MAIO : D : Bologna : 7
+113,DE SCIGLIO : D : Juventus : 7
+114,DE SILVESTRI : D : Torino : 14
+115,DE VRIJ : D : Inter : 17
+116,DELL'ORCO : D : Sassuolo : 4
+117,DI LORENZO : D : Empoli : 5
+118,DICKMANN : D : SPAL : 2
+119,DIJKS : D : Bologna : 5
+120,DIKS : D : Fiorentina : 4
+121,DIMARCO : D : Parma : 5
+122,DJIDJI : D : Torino : 5
+123,DJIMSITI : D : Atalanta : 2
+124,DJOUROU : D : SPAL : 8
+125,DURMISI : D : Lazio : 5
+126,FARAGO' : D : Cagliari : 4
+127,FAZIO : D : Roma : 11
+128,FELIPE : D : SPAL : 6
+129,FERRARI A : D : Sampdoria : 4
+130,FERRARI G : D : Sassuolo : 8
+131,FLORENZI : D : Roma : 14
+132,GAGLIOLO : D : Parma : 6
+133,GAZZOLA : D : Parma : 5
+134,GHIGLIONE : D : Frosinone : 2
+135,GHOULAM : D : Napoli : 9
+136,GOBBI : D : Parma : 2
+137,GOLDANIGA : D : Frosinone : 6
+138,GONZALEZ G : D : Bologna : 6
+139,GOSENS : D : Atalanta : 7
+140,GUNTER : D : Genoa : 3
+141,HANCKO : D : Fiorentina : 3
+142,HATEBOER : D : Atalanta : 8
+143,HELANDER : D : Bologna : 7
+144,HYSAJ : D : Napoli : 9
+145,IACOPONI : D : Parma : 2
+146,IZZO : D : Torino : 9
+147,JAROSZYNSKI : D : Chievo : 5
+148,JUAN JESUS : D : Roma : 7
+149,JUNIOR TAVARES : D : Sampdoria : 3
+150,KARSDORP : D : Roma : 6
+151,KLAVAN : D : Cagliari : 7
+152,KOLAROV : D : Roma : 17
+153,KOULIBALY : D : Napoli : 17
+154,KRAJNC : D : Frosinone : 4
+155,LAKICEVIC : D : Genoa : 5
+156,LAURINI : D : Fiorentina : 3
+157,LEMOS : D : Sassuolo : 7
+158,LEVERBE : D : Sampdoria : 1
+159,LIROLA : D : Sassuolo : 6
+160,LISANDRO LOPEZ : D : Genoa : 7
+161,LUIZ FELIPE : D : Lazio : 8
+162,LUKAKU J : D : Lazio : 5
+163,LUPERTO : D : Napoli : 2
+164,LYANCO : D : Torino : 6
+165,LYKOGIANNIS : D : Cagliari : 5
+166,MAGNANI : D : Sassuolo : 2
+167,MAIETTA : D : Empoli : 5
+168,MAKSIMOVIC : D : Napoli : 4
+169,MALCUIT : D : Napoli : 7
+170,MANCINI G : D : Atalanta : 8
+171,MANOLAS : D : Roma : 12
+172,MARCANO : D : Roma : 7
+173,MARCJANIK : D : Empoli : 4
+174,MARIO RUI : D : Napoli : 8
+175,MARLON : D : Sassuolo : 8
+176,MASIELLO A : D : Atalanta : 14
+177,MATTIELLO : D : Bologna : 8
+178,MBAYE : D : Bologna : 5
+179,MILENKOVIC : D : Fiorentina : 6
+180,MIRANDA : D : Inter : 7
+181,MOLINARO : D : Frosinone : 7
+182,MORETTI : D : Torino : 3
+183,MURRU : D : Sampdoria : 6
+184,MUSACCHIO : D : Milan : 5
+185,N'KOULOU : D : Torino : 12
+186,NUYTINCK : D : Udinese : 5
+187,OPOKU : D : Udinese : 3
+188,PAJAC : D : Cagliari : 2
+189,PALOMINO : D : Atalanta : 7
+190,PASQUAL : D : Empoli : 7
+191,PATRIC : D : Lazio : 2
+192,PAZ : D : Bologna : 4
+193,PELLEGRINI LU : D : Roma : 3
+194,PELUSO : D : Sassuolo : 4
+195,PEREIRA P : D : Genoa : 3
+196,PEZZELLA GER : D : Fiorentina : 10
+197,PEZZELLA GIU : D : Udinese : 5
+198,PISACANE : D : Cagliari : 4
+199,RADU : D : Lazio : 8
+200,RANOCCHIA : D : Inter : 4
+201,RASMUSSEN : D : Empoli : 3
+202,RECA : D : Atalanta : 5
+203,REGINI : D : Sampdoria : 3
+204,RIGIONE : D : Chievo : 1
+205,RODRIGUEZ R : D : Milan : 8
+206,ROGERIO : D : Sassuolo : 4
+207,ROMAGNA : D : Cagliari : 6
+208,ROMAGNOLI A : D : Milan : 10
+209,ROMERO C : D : Genoa : 1
+210,ROSSETTINI : D : Chievo : 5
+211,RUGANI : D : Juventus : 8
+212,SALA : D : Sampdoria : 3
+213,SALAMON : D : Frosinone : 4
+214,SAMIR : D : Udinese : 6
+215,SANTON : D : Roma : 3
+216,SERNICOLA : D : Sassuolo : 1
+217,SIERRALTA : D : Parma : 1
+218,SILVESTRE : D : Empoli : 7
+219,SIMIC L : D : SPAL : 2
+220,SIMIC S : D : Milan : 2
+221,SKRINIAR : D : Inter : 16
+222,SPINAZZOLA : D : Juventus : 6
+223,SPOLLI : D : Genoa : 6
+224,SRNA : D : Cagliari : 7
+225,STRINIC : D : Milan : 5
+226,STRYGER LARSEN : D : Udinese : 6
+227,TANASIJEVIC : D : Chievo : 1
+228,TER AVEST : D : Udinese : 3
+229,TOLOI : D : Atalanta : 10
+230,TOMOVIC : D : Chievo : 6
+231,TONELLI : D : Sampdoria : 6
+232,TROOST-EKONG : D : Udinese : 3
+233,UNTERSEE : D : Empoli : 3
+234,VARNIER : D : Atalanta : 1
+235,VESELI : D : Empoli : 4
+236,VICARI : D : SPAL : 4
+237,VITOR HUGO : D : Fiorentina : 6
+238,VRSALJKO : D : Inter : 14
+239,WAGUE : D : Udinese : 1
+240,WALLACE : D : Lazio : 5
+241,ZAMPANO : D : Frosinone : 5
+242,ZAPATA C : D : Milan : 4
+243,ZUKANOVIC : D : Genoa : 5
+244,ACQUAH : C : Empoli : 4
+245,ALLAN : C : Napoli : 17
+246,BADELJ : C : Lazio : 7
+247,BADU : C : Udinese : 5
+248,BAKAYOKO : C : Milan : 11
+249,BALIC : C : Udinese : 3
+250,BARAK : C : Udinese : 15
+251,BARELLA : C : Cagliari : 14
+252,BARILLA' : C : Parma : 3
+253,BARRETO : C : Sampdoria : 5
+254,BASELLI : C : Torino : 10
+255,BEGHETTO : C : Frosinone : 2
+256,BEHRAMI : C : Udinese : 4
+257,BENASSI : C : Fiorentina : 12
+258,BENNACER : C : Empoli : 6
+259,BENTANCUR : C : Juventus : 8
+260,BERENGUER : C : Torino : 5
+261,BERISHA V : C : Lazio : 11
+262,BERNARDESCHI : C : Juventus : 16
+263,BERTOLACCI : C : Milan : 8
+264,BESSA : C : Genoa : 7
+265,BIABIANY : C : Parma : 5
+266,BIGLIA : C : Milan : 8
+267,BIRSA : C : Chievo : 12
+268,BOATENG : C : Sassuolo : 20
+269,BOGA : C : Sassuolo : 8
+270,BONAVENTURA : C : Milan : 20
+271,BORINI : C : Milan : 6
+272,BORJA VALERO : C : Inter : 6
+273,BOURABIA : C : Sassuolo : 5
+274,BRADARIC : C : Cagliari : 9
+275,BRIGHI : C : Empoli : 2
+276,BROZOVIC : C : Inter : 16
+277,BRUNO JORDAO : C : Lazio : 1
+278,BURRUCHAGA : C : Chievo : 1
+279,CALHANOGLU : C : Milan : 21
+280,CAN  : C : Juventus : 19
+281,CANDREVA : C : Inter : 13
+282,CAPEZZI : C : Empoli : 4
+283,CASSATA : C : Frosinone : 2
+284,CASTRO : C : Cagliari : 12
+285,CATALDI : C : Lazio : 4
+286,CHIBSAH : C : Frosinone : 3
+287,CHIESA : C : Fiorentina : 23
+288,CICIRETTI : C : Parma : 12
+289,CIGARINI : C : Cagliari : 7
+290,CORIC : C : Roma : 3
+291,CORREA : C : Lazio : 12
+292,COULIBALY : C : Udinese : 1
+293,CRISETIG : C : Frosinone : 5
+294,CRISTANTE : C : Roma : 18
+295,CUADRADO : C : Juventus : 18
+296,DABO : C : Fiorentina : 7
+297,D'ALESSANDRO : C : Udinese : 3
+298,DE PAUL : C : Udinese : 15
+299,DE ROON : C : Atalanta : 8
+300,DE ROSSI : C : Roma : 8
+301,DEIOLA : C : Parma : 3
+302,DEPAOLI : C : Chievo : 4
+303,DESSENA : C : Cagliari : 3
+304,DEZI : C : Parma : 5
+305,DI GAUDIO : C : Parma : 4
+306,DIAWARA : C : Napoli : 9
+307,DJURICIC : C : Sassuolo : 5
+308,DONSAH : C : Bologna : 8
+309,DOUGLAS COSTA : C : Juventus : 24
+310,DUNCAN : C : Sassuolo : 8
+311,DZEMAILI : C : Bologna : 13
+312,EKDAL : C : Sampdoria : 8
+313,EVERTON LUIZ : C : SPAL : 6
+314,EYSSERIC : C : Fiorentina : 8
+315,FARES : C : SPAL : 5
+316,FERNANDES : C : Fiorentina : 7
+317,FOFANA : C : Udinese : 9
+318,FREULER : C : Atalanta : 16
+319,GAGLIARDINI : C : Inter : 7
+320,GERSON : C : Fiorentina : 11
+321,GIACCHERINI : C : Chievo : 14
+322,GORI : C : Frosinone : 1
+323,GRASSI : C : Parma : 9
+324,HALILOVIC : C : Milan : 2
+325,HALLFREDSSON : C : Frosinone : 3
+326,HAMSIK : C : Napoli : 15
+327,HETEMAJ : C : Chievo : 6
+328,HILJEMARK : C : Genoa : 6
+329,ILICIC : C : Atalanta : 26
+330,INGELSSON : C : Udinese : 1
+331,IONITA : C : Cagliari : 9
+332,JANKTO : C : Sampdoria : 15
+333,JOAO MARIO : C : Inter : 3
+334,JOAO PEDRO : C : Cagliari : 13
+335,KATUMA : C : SPAL : 1
+336,KESSIE' : C : Milan : 11
+337,KHEDIRA : C : Juventus : 18
+338,KIYINE : C : Chievo : 3
+339,KREJCI : C : Bologna : 5
+340,KRUNIC : C : Empoli : 9
+341,KULUSEVSKI : C : Atalanta : 1
+342,KURTIC : C : SPAL : 9
+343,LAXALT : C : Milan : 9
+344,LAZOVIC : C : Genoa : 5
+345,LAZZARI M : C : SPAL : 10
+346,LINETTY : C : Sampdoria : 6
+347,LOCATELLI M : C : Sassuolo : 7
+348,LOLLO : C : Empoli : 4
+349,LUCAS LEIVA : C : Lazio : 12
+350,LUIS ALBERTO : C : Lazio : 27
+351,LUKIC : C : Torino : 2
+352,LULIC : C : Lazio : 11
+353,MAGNANELLI : C : Sassuolo : 5
+354,MAIELLO : C : Frosinone : 5
+355,MANDRAGORA : C : Udinese : 9
+356,MARUSIC : C : Lazio : 9
+357,MATUIDI : C : Juventus : 15
+358,MAURI J : C : Milan : 1
+359,MAZZITELLI : C : Genoa : 6
+360,MEITE' : C : Torino : 3
+361,MIGUEL VELOSO : C : Genoa : 4
+362,MILINKOVIC-SAVIC : C : Lazio : 30
+363,MINALA : C : Lazio : 2
+364,MISSIROLI : C : SPAL : 6
+365,MONTOLIVO : C : Milan : 4
+366,MUNARI : C : Parma : 1
+367,MURGIA : C : Lazio : 3
+368,NAGY : C : Bologna : 4
+369,NAINGGOLAN : C : Inter : 25
+370,NORGAARD : C : Fiorentina : 5
+371,NZONZI : C : Roma : 11
+372,OBI : C : Chievo : 5
+373,OMEONGA : C : Genoa : 5
+374,PADOIN : C : Cagliari : 4
+375,PAGANINI : C : Frosinone : 2
+376,PAROLO : C : Lazio : 13
+377,PASALIC : C : Atalanta : 14
+378,PASTORE : C : Roma : 21
+379,PEETERS : C : Sampdoria : 1
+380,PELLEGRINI LO : C : Roma : 14
+381,PERISIC : C : Inter : 28
+382,PEROTTI : C : Roma : 16
+383,PESSINA : C : Atalanta : 5
+384,PJANIC : C : Juventus : 20
+385,POLI : C : Bologna : 8
+386,PONTISSO : C : Udinese : 1
+387,PRAET : C : Sampdoria : 10
+388,PULGAR : C : Bologna : 10
+389,RADOVANOVIC : C : Chievo : 7
+390,RAMIREZ : C : Sampdoria : 14
+391,RICCARDI : C : Roma : 1
+392,RIGONI L : C : Parma : 8
+393,RIGONI N : C : Chievo : 6
+394,RINCON : C : Torino : 7
+395,ROG : C : Napoli : 6
+396,ROLON : C : Genoa : 5
+397,ROMULO : C : Genoa : 9
+398,RUIZ : C : Napoli : 14
+399,SAMMARCO : C : Frosinone : 1
+400,SANDRO : C : Genoa : 9
+401,SAPONARA : C : Sampdoria : 10
+402,SCHIATTARELLA : C : SPAL : 4
+403,SCOZZARELLA : C : Parma : 3
+404,SENSI : C : Sassuolo : 6
+405,SODDIMO : C : Frosinone : 5
+406,SORIANO : C : Torino : 12
+407,STIJEPOVIC : C : Sampdoria : 1
+408,STULAC : C : Parma : 5
+409,SVANBERG : C : Bologna : 3
+410,TRAORE' HJ : C : Empoli : 1
+411,UCAN : C : Empoli : 6
+412,VALDIFIORI : C : SPAL : 3
+413,VALENCIA JM : C : Bologna : 1
+414,VALOTI : C : SPAL : 5
+415,VALZANIA : C : Atalanta : 2
+416,VECINO : C : Inter : 10
+417,VERDI : C : Napoli : 18
+418,VERETOUT : C : Fiorentina : 17
+419,VIEIRA : C : Sampdoria : 6
+420,VIGNATO : C : Chievo : 1
+421,VITALE : C : SPAL : 1
+422,VIVIANI : C : SPAL : 9
+423,VLOET : C : Frosinone : 6
+424,ZAJC : C : Empoli : 8
+425,ZANIOLO : C : Roma : 1
+426,ZIELINSKI : C : Napoli : 14
+427,ANTENUCCI : A : SPAL : 25
+428,ARDAIZ : A : Frosinone : 3
+429,BABACAR : A : Sassuolo : 14
+430,BARAYE : A : Parma : 5
+431,BARROW : A : Atalanta : 11
+432,BELOTTI : A : Torino : 29
+433,BERARDI : A : Sassuolo : 16
+434,BRIGNOLA : A : Sassuolo : 9
+435,CAICEDO : A : Lazio : 6
+436,CALAIO' : A : Parma : 1
+437,CALLEJON : A : Napoli : 21
+438,CAMPBELL : A : Frosinone : 12
+439,CAPRARI : A : Sampdoria : 10
+440,CAPUTO : A : Empoli : 14
+441,CASTILLEJO : A : Milan : 16
+442,CERAVOLO : A : Parma : 10
+443,CERRI : A : Cagliari : 7
+444,CIANO : A : Frosinone : 10
+445,CIOFANI D : A : Frosinone : 6
+446,COLIDIO : A : Inter : 1
+447,CRISTIANO RONALDO : A : Juventus : 49
+448,CUTRONE : A : Milan : 17
+449,DA CRUZ : A : Parma : 5
+450,DALMONTE : A : Genoa : 1
+451,DAMASCAN : A : Torino : 1
+452,DEFREL : A : Sampdoria : 20
+453,DESTRO : A : Bologna : 13
+454,DI FRANCESCO F : A : Sassuolo : 14
+455,DIONISI : A : Frosinone : 11
+456,DJORDJEVIC : A : Chievo : 11
+457,DYBALA : A : Juventus : 36
+458,DZEKO : A : Roma : 35
+459,EDERA : A : Torino : 4
+460,EL SHAARAWY : A : Roma : 16
+461,FALCINELLI : A : Bologna : 16
+462,FARIAS : A : Cagliari : 12
+463,FAVILLI : A : Genoa : 10
+464,FLOCCARI : A : SPAL : 5
+465,GERVINHO : A : Parma : 10
+466,GOMEZ A : A : Atalanta : 23
+467,GRAICIAR : A : Fiorentina : 1
+468,HIGUAIN : A : Milan : 33
+469,IAGO FALQUE : A : Torino : 25
+470,ICARDI : A : Inter : 39
+471,IMMOBILE : A : Lazio : 41
+472,INGLESE : A : Parma : 13
+473,INSIGNE : A : Napoli : 27
+474,JAKUPOVIC : A : Empoli : 1
+475,KEAN : A : Juventus : 7
+476,KEITA B : A : Inter : 19
+477,KLUIVERT : A : Roma : 18
+478,KOUAME' : A : Genoa : 3
+479,KOWNACKI : A : Sampdoria : 11
+480,LA GUMINA : A : Empoli : 12
+481,LAPADULA : A : Genoa : 12
+482,LASAGNA : A : Udinese : 22
+483,LERIS : A : Chievo : 1
+484,LOMBARDI : A : Lazio : 3
+485,MACHIS : A : Udinese : 12
+486,MANDZUKIC : A : Juventus : 18
+487,MARTINEZ L : A : Inter : 17
+488,MATRI : A : Sassuolo : 3
+489,MCHEDLIDZE : A : Empoli : 5
+490,MEDEIROS : A : Genoa : 11
+491,MEGGIORINI : A : Chievo : 6
+492,MERTENS : A : Napoli : 31
+493,MICIN : A : Udinese : 1
+494,MILIK : A : Napoli : 26
+495,MIRALLAS : A : Fiorentina : 14
+496,MONCINI : A : SPAL : 3
+497,MRAZ : A : Empoli : 7
+498,ODGAARD : A : Sassuolo : 1
+499,OKWONKWO : A : Bologna : 5
+500,ORSOLINI : A : Bologna : 3
+501,OUNAS : A : Napoli : 7
+502,PALACIO : A : Bologna : 8
+503,PALOSCHI : A : SPAL : 13
+504,PANDEV : A : Genoa : 9
+505,PARIGINI : A : Torino : 7
+506,PAVOLETTI : A : Cagliari : 17
+507,PEDRO NETO : A : Lazio : 1
+508,PELLISSIER : A : Chievo : 3
+509,PERICA : A : Frosinone : 12
+510,PETAGNA : A : SPAL : 15
+511,PIATEK : A : Genoa : 13
+512,PINAMONTI : A : Frosinone : 7
+513,PJACA : A : Fiorentina : 16
+514,POLITANO : A : Inter : 15
+515,PUCCIARELLI : A : Chievo : 4
+516,PUSSETTO : A : Udinese : 12
+517,QUAGLIARELLA : A : Sampdoria : 28
+518,RIGONI E : A : Atalanta : 11
+519,RODRIGUEZ A : A : Empoli : 2
+520,ROSSI A : A : Lazio : 1
+521,SALCEDO MORA : A : Inter : 1
+522,SANTANDER : A : Bologna : 10
+523,SAU : A : Cagliari : 9
+524,SCHICK : A : Roma : 17
+525,SILIGARDI : A : Parma : 7
+526,SIMEONE : A : Fiorentina : 26
+527,SOTTIL : A : Fiorentina : 2
+528,SPROCATI : A : Parma : 1
+529,STEPINSKI : A : Chievo : 13
+530,SUSO : A : Milan : 21
+531,TEODORCZYK : A : Udinese : 12
+532,THEREAU : A : Fiorentina : 13
+533,TROTTA : A : Sassuolo : 8
+534,TUMMINELLO : A : Atalanta : 8
+535,UNDER : A : Roma : 21
+536,VIZEU : A : Udinese : 9
+537,VLAHOVIC : A : Fiorentina : 1
+538,YOUNES : A : Napoli : 3
+539,ZAPATA D : A : Atalanta : 26
+540,ZAZA : A : Torino : 22

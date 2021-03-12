@@ -1,0 +1,3 @@
+{
+  "table_player": " CREATE TABLE IF NOT EXISTS player_info (id integer PRIMARY KEY,teams_name TEXT NOT NULL,name_player TEXT,player_position TEXT, vote INTEGER, goal INTEGER, assistance INTEGER, penalties_scored_saved INTEGER, missed_penalties INTEGER, own_goal TEXT, admonitions TEXT, expulsion INTEGER, fanta_voto INTEGER, year TEXT, day INTEGER);"
+}
