@@ -1,12 +1,12 @@
 from statsmodels.sandbox.tsa.movstat import movmean
 
-from fantacalcio.models.ArimaModel import ArimaModel
-from fantacalcio.common.CommonFunction import CommonFunction
-from fantacalcio.models.KerasRegressorModel import KerasRegressorModel
-from fantacalcio.models.LSTMModel import LSTMModel
-from fantacalcio.models.MLPRegressorModel import MLPRegressorModel
-from fantacalcio.common.ThreadPool import ThreadPool
-from fantacalcio.models.SarimaModel import SarimaModel
+from models.ArimaModel import ArimaModel
+from common.CommonFunction import CommonFunction
+from models.KerasRegressorModel import KerasRegressorModel
+from models.LSTMModel import LSTMModel
+from models.MLPRegressorModel import MLPRegressorModel
+from common.ThreadPool import ThreadPool
+from models.SarimaModel import SarimaModel
 
 
 class PredictiveOperation:

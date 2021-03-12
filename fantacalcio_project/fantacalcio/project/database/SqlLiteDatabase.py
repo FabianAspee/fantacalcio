@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from pandas import DataFrame
 from sqlalchemy import create_engine
-from fantacalcio.common.CommonFunction import CommonFunction
+from common.CommonFunction import CommonFunction
 
 
 def __query_for_check_table__(table_name) -> str:

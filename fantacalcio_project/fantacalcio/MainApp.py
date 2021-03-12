@@ -1,6 +1,6 @@
 from project.project.PlayerOperation import PlayerOperation
-from fantacalcio.common.ThreadPool import ThreadPool
-from fantacalcio.project.project.VotePicker import VotePicker
+from common.ThreadPool import ThreadPool
+from project.project.VotePicker import VotePicker
 import argparse
 
 

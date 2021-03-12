@@ -6,8 +6,8 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import KFold
 from tensorflow.python.keras.wrappers.scikit_learn import KerasRegressor
 
-from fantacalcio.common.GeneralFunction import GeneralFunction
-from fantacalcio.project.project.Graphic import Graphic
+from common.GeneralFunction import GeneralFunction
+from project.project.Graphic import Graphic
 
 
 class KerasRegressorModel(GeneralFunction):

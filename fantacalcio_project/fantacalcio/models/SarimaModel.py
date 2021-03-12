@@ -1,7 +1,7 @@
 import numpy as np
 import statsmodels.api as sm
 
-from fantacalcio.project.project.Graphic import Graphic
+from project.project.Graphic import Graphic
 
 
 class SarimaModel:

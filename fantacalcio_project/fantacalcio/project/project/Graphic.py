@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from fantacalcio.common.CommonFunction import CommonFunction
+from common.CommonFunction import CommonFunction
 
 plt.rcParams["figure.figsize"] = (18, 6)
 

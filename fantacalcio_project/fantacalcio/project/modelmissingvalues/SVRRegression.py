@@ -1,8 +1,8 @@
 import numpy as np
 from sklearn.svm import SVR
 
-from fantacalcio.caseclasspython.CaseSVRModel import CaseSVRModel
-from fantacalcio.common.CommonFunction import CommonFunction
+from caseclasspython.CaseSVRModel import CaseSVRModel
+from common.CommonFunction import CommonFunction
 
 
 class SVRRegression:

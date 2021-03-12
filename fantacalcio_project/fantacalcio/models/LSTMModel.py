@@ -3,7 +3,7 @@ from keras.layers import Dense
 from keras.layers import LSTM
 import numpy as np
 from keras.preprocessing.sequence import TimeseriesGenerator
-from fantacalcio.project.project.Graphic import Graphic
+from project.project.Graphic import Graphic
 
 np.random.seed(458)
 

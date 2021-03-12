@@ -1,6 +1,6 @@
 import pmdarima as pm
 import numpy as np
-from fantacalcio.project.project.Graphic import Graphic
+from project.project.Graphic import Graphic
 
 
 class ArimaModel:

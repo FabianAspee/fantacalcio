@@ -1,11 +1,11 @@
 import numpy as np
 import pandas as pd
 
-from fantacalcio.project.project.Graphic import Graphic
-from fantacalcio.project.project.PredictiveOperation import PredictiveOperation
-from fantacalcio.project.modelmissingvalues.SVRRegression import SVRRegression
-from fantacalcio.project.database.SqlLiteDatabase import SqlLiteDatabase
-from fantacalcio.common.ThreadPool import ThreadPool
+from project.project.Graphic import Graphic
+from project.project.PredictiveOperation import PredictiveOperation
+from project.modelmissingvalues.SVRRegression import SVRRegression
+from project.database.SqlLiteDatabase import SqlLiteDatabase
+from common.ThreadPool import ThreadPool
 
 
 def __define_dataframe_for_year__(votes, years, days):

@@ -2,8 +2,8 @@ import time
 import numpy as np
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.neural_network import MLPRegressor
-from fantacalcio.common.GeneralFunction import GeneralFunction
-from fantacalcio.project.project.Graphic import Graphic
+from common.GeneralFunction import GeneralFunction
+from project.project.Graphic import Graphic
 
 
 class MLPRegressorModel(GeneralFunction):

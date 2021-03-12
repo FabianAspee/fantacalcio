@@ -3,10 +3,10 @@ import pandas as pd
 import requests
 import bs4
 
-from fantacalcio.common.ThreadPool import ThreadPool
-from fantacalcio.caseclasspython.InfoPlayers import InfoPlayer
-from fantacalcio.project.project.Player import Player
-from fantacalcio.project.database.SqlLiteDatabase import SqlLiteDatabase
+from common.ThreadPool import ThreadPool
+from caseclasspython.InfoPlayers import InfoPlayer
+from project.project.Player import Player
+from project.database.SqlLiteDatabase import SqlLiteDatabase
 import numpy as np
 
 
