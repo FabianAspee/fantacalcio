@@ -1,3 +1,5 @@
+import asyncio
+
 import statsmodels.api as sm
 from common.CommonFunction import CommonFunction
 from common.GeneralFunction import GeneralFunction
@@ -12,6 +14,8 @@ from statsmodels.sandbox.tsa import movmean
 from statsmodels.sandbox.tsa.try_arma_more import pm
 from tensorflow.python.keras.wrappers.scikit_learn import KerasRegressor
 import json
+import os
+import math
 
 
 class SearchBestModel(GeneralFunction):
@@ -19,18 +23,26 @@ class SearchBestModel(GeneralFunction):
     def create_variable_for_model(self, player, windows_size=13):
         return super().create_variable_for_model(player, windows_size)
 
-    def start(self, info_player, name_player):
-        all_process = [
-            (ThreadPool.get_pool().apply_async(self.mlp_regressor_grid, (info_player, name_player)), 'MLP'),
-            (ThreadPool.get_pool().apply_async(self.svr_regressor_grid, (info_player, name_player)), 'SVR'),
-            (ThreadPool.get_pool().apply_async(self.keras_regressor_grid, (info_player, name_player)), 'Keras'),
-            (ThreadPool.get_pool().apply_async(self.decision_tree_regressor_grid, (info_player, name_player)),
-             'DecisionTree'),
-            (ThreadPool.get_pool().apply_async(self.random_forest_regressor_grid, (info_player, name_player)),
-             'RandomForest')]
-        return all_process
+    @staticmethod
+    def __define_processor__(number_grid):
+        number_processor = os.cpu_count()
+        result_div_for_process = int(math.floor(number_processor / number_grid))
+        result_mod_for_process = int(number_processor % number_grid)
+        list_processor = [result_div_for_process for _ in range(0, number_grid)]
+        for index in range(0, result_mod_for_process):
+            list_processor[index] = list_processor[index] + 1
+        return list_processor
 
-    def mlp_regressor_grid(self, info_player, name_player):
+    async def start(self, info_player, name_player):
+        use_all_processor = -1
+        tasks = [self.keras_regressor_grid(info_player, name_player, use_all_processor),
+                 self.decision_tree_regressor_grid(info_player, name_player, use_all_processor),
+                 self.random_forest_regressor_grid(info_player, name_player, use_all_processor)]
+        await asyncio.wait(tasks)
+
+        return ['Keras', 'DecisionTree', 'RandomForest']
+
+    async def mlp_regressor_grid(self, info_player, name_player, num_processor):
         mlp_model = MLPRegressor()
         parameters = {'hidden_layer_sizes': [(20,), (40,)],
                       'activation': ("relu", "identity"),
@@ -42,10 +54,11 @@ class SearchBestModel(GeneralFunction):
                       'alpha': [0.0009],
                       'random_state': [1234]}
         x_train, x_target, _, _ = self.__get_information_for_model__(info_player)
-        get_best_params = CommonGridSearch.get_best_params(mlp_model, parameters, x_train, x_target)
+        get_best_params = CommonGridSearch.get_best_params(mlp_model, parameters, x_train, x_target, num_processor)
         self.__save_best_model_(get_best_params, 'mlp')
 
-    def decision_tree_regressor_grid(self, info_player, name_player):
+    async def decision_tree_regressor_grid(self, info_player, name_player, num_processor):
+        print('decision')
         decision_tree_model = DecisionTreeRegressor()
         parameters = {'criterion': ('mse', 'mae', 'poisson'),
                       'splitter': ('best', 'random'),
@@ -58,10 +71,12 @@ class SearchBestModel(GeneralFunction):
                       'presort': 'auto',
                       'ccp_alpha': [0.02, 0.05, 0.002]}
         x_train, x_target, _, _ = self.__get_information_for_model__(info_player)
-        get_best_params = CommonGridSearch.get_best_params(decision_tree_model, parameters, x_train, x_target)
+        get_best_params = CommonGridSearch.get_best_params(decision_tree_model, parameters, x_train, x_target,
+                                                           num_processor)
         self.__save_best_model_(get_best_params, 'decision_tree')
 
-    def random_forest_regressor_grid(self, info_player, name_player):
+    async def random_forest_regressor_grid(self, info_player, name_player, num_processor):
+        print('random')
         random_forest_model = RandomForestRegressor()
         parameters = {'n_estimators': [100, 200, 50, 250],
                       'criterion': ('mse', 'mae'),
@@ -75,16 +90,17 @@ class SearchBestModel(GeneralFunction):
                       'warm_start': [True, False],
                       'ccp_alpha': [0.02, 0.05, 0.002]}
         x_train, x_target, _, _ = self.__get_information_for_model__(info_player)
-        get_best_params = CommonGridSearch.get_best_params(random_forest_model, parameters, x_train, x_target)
+        get_best_params = CommonGridSearch.get_best_params(random_forest_model, parameters, x_train, x_target,
+                                                           num_processor)
         self.__save_best_model_(get_best_params, 'random_forest')
 
-    def lstm_regressor_grid(self, info_player, name_player):
+    async def lstm_regressor_grid(self, info_player, name_player, num_processor):
         lstm_model = LSTMModel()
         parameters = {}
         x_train, x_target, _, _ = self.__get_information_for_model__(info_player)
-        return CommonGridSearch.get_all_result(lstm_model, parameters, x_train, x_target)
+        return CommonGridSearch.get_all_result(lstm_model, parameters, x_train, x_target, num_processor)
 
-    def sarima_regressor_grid(self, info_player, name_player):
+    async def sarima_regressor_grid(self, info_player, name_player, num_processor):
         x_train, x_target, _, _ = self.__get_information_for_model__(info_player)
         sarima_model = sm.tsa.SARIMAX(info_player)
         parameters = {'order': [(1, 1, 1), (1, 2, 3), (2, 2, 1)],
@@ -94,16 +110,17 @@ class SearchBestModel(GeneralFunction):
                       'enforce_invertibility': [True, False],
                       'hamilton_representation': [True, False],
                       'concentrate_scale': [True, False]}
-        get_best_params = CommonGridSearch.get_best_params(sarima_model, parameters, x_train, x_target)
+        get_best_params = CommonGridSearch.get_best_params(sarima_model, parameters, x_train, x_target, num_processor)
         self.__save_best_model_(get_best_params, 'sarima')
 
-    def arima_regressor_grid(self, info_player, name_player):
+    async def arima_regressor_grid(self, info_player, name_player, num_processor):
         arima_model = pm.auto_arima()
         parameters = {}
         x_train, x_target, _, _ = self.__get_information_for_model__(info_player)
-        return CommonGridSearch.get_all_result(arima_model, parameters, x_train, x_target)
+        return CommonGridSearch.get_all_result(arima_model, parameters, x_train, x_target, num_processor)
 
-    def keras_regressor_grid(self, info_player, name_player):
+    async def keras_regressor_grid(self, info_player, name_player, num_processor):
+        print('keras')
         keras_regressor_model = KerasRegressor(CommonFunction.__baseline_model__)
         parameters = {
             'dense': [100, 50, 200],
@@ -116,10 +133,11 @@ class SearchBestModel(GeneralFunction):
             'rate': [0.5, 0.4, 0.3, 0.2, 0.1, 0]
         }
         x_train, x_target, _, _ = self.__get_information_for_model__(info_player)
-        get_best_params = CommonGridSearch.get_best_params(keras_regressor_model, parameters, x_train, x_target)
+        get_best_params = CommonGridSearch.get_best_params(keras_regressor_model, parameters, x_train, x_target,
+                                                           num_processor)
         self.__save_best_model_(get_best_params, 'keras_regressor')
 
-    def svr_regressor_grid(self, info_player, name_player):
+    async def svr_regressor_grid(self, info_player, name_player, num_processor):
         svr_regressor_model = SVR()
         parameters = {
             'kernel': ('linear', 'poly', 'rbf', 'sigmoid'),
@@ -133,7 +151,8 @@ class SearchBestModel(GeneralFunction):
             'cache_size': [200, 400, 600]
         }
         x_train, x_target, _, _ = self.__get_information_for_model__(info_player)
-        get_best_params = CommonGridSearch.get_best_params(svr_regressor_model, parameters, x_train, x_target)
+        get_best_params = CommonGridSearch.get_best_params(svr_regressor_model, parameters, x_train, x_target,
+                                                           num_processor)
         self.__save_best_model_(get_best_params, 'svr_regressor')
 
     def __get_information_for_model__(self, info_player):

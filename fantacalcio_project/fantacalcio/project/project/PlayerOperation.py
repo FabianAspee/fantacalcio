@@ -29,14 +29,14 @@ class PlayerOperation:
         self.__svr__ = SVRRegression()
         self.__predictive_operation = PredictiveOperation()
 
-    def start(self):
+    async def start(self):
         self.__sql_operation.start()
         if self.__name_player__ is not None:
             self.__select_info_player__()
         elif self.__name_team__ is not None:
             self.__select_info_team__()
         else:
-            self.__select_all_information__()
+            await self.__select_all_information__()
 
     def info_name_player(self, limit):
         self.__sql_operation.start()
@@ -93,17 +93,17 @@ class PlayerOperation:
     def __fill_nan_values_with_df_method__(series_player):
         return series_player.fillna(method='ffill').values.reshape(-1, 1)
 
-    def __select_all_information__(self):
+    async def __select_all_information__(self):
         all_player = self.__sql_operation.read_player_in_this_session()
         player_with_min_vote = self.__sql_operation.read_player_with_min_votes()
         all_player.day = pd.to_datetime(all_player.day + '0', format='%Y-%W%w', errors='raise')
         all_player = all_player.set_index('day')
         self.__sharpe_calculus__(all_player, player_with_min_vote)
         del self.__sql_operation
-        self.__start_all_process__(all_player, player_with_min_vote)
+        await self.__start_all_process__(all_player, player_with_min_vote)
 
-    def __start_all_process__(self, all_player, player_with_min_vote):
-        name_player_more_info =player_with_min_vote.loc[0,'name_player']
+    async def __start_all_process__(self, all_player, player_with_min_vote):
+        name_player_more_info = player_with_min_vote.loc[0, 'name_player']
         all_process = self.__start_process_filling_data__(all_player, player_with_min_vote)
         process_grids = []
         all_process_model = []
@@ -112,11 +112,11 @@ class PlayerOperation:
             if name_player_more_info == name_player:
                 process_grids = SearchBestModel().start(process.get(), name_player)
             ProcessPlayer.append_player(process.get(), name_player)
+        await process_grids
 
-        for process_grid, model in process_grids:
-            process_grid.wait()
-            #all_process_model = ProcessPlayer.process_all_player_in_models(model)
-        #[final_process.wait() for process_for_player in all_process_model for final_process in process_for_player]
+        # process_grid.wait()
+        # all_process_model = ProcessPlayer.process_all_player_in_models(model)
+        # [final_process.wait() for process_for_player in all_process_model for final_process in process_for_player]
 
     @staticmethod
     def __sharpe_calculus__(all_player, player_with_min_vote):

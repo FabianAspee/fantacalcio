@@ -1,3 +1,5 @@
+import asyncio
+
 from project.project.PlayerOperation import PlayerOperation
 from common.ThreadPool import ThreadPool
 from project.project.VotePicker import VotePicker
@@ -11,12 +13,14 @@ class MainApp:
         super().__init__()
         self.__vote_picker__ = VotePicker(file_giocatori, session, db_path, name_table)
         self.__player_operation = PlayerOperation(db_path, name_table, name_player, name_team)
+        self.__loop__ = asyncio.get_event_loop()
 
     def start(self):
         self.__vote_picker__.start()
-        self.__player_operation.start()
+        self.__loop__.run_until_complete(self.__player_operation.start())
         ThreadPool.close()
         ThreadPool.join()
+        self.__loop__.close()
 
     def info(self, limit: int):
         self.__player_operation.info_name_player(limit)

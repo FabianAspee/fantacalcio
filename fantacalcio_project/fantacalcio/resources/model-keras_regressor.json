@@ -1,0 +1,1 @@
+{"activation": "tanh", "activation_init": "tanh", "batch_size": 10, "dense": 200, "epochs": 100, "optimizer": "RMSprop", "rate": 0.1, "units": 100}

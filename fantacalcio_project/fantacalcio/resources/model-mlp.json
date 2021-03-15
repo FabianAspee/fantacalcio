@@ -1,1 +1,1 @@
-{"hidden_layer_sizes": [[20], [40]], "activation": ["relu", "identity"], "solver": ["adam", "adam"], "learning_rate_init": [0.0009], "warm_start": [true], "max_iter": [500, 1000], "batch_size": [5, 10, 15], "alpha": [0.0009], "random_state": [1234]}
+{"activation": "identity", "alpha": 0.0009, "batch_size": 10, "hidden_layer_sizes": [20], "learning_rate_init": 0.0009, "max_iter": 500, "random_state": 1234, "solver": "adam", "warm_start": true}

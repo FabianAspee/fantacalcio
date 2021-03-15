@@ -1,0 +1,1 @@
+{"C": 2, "cache_size": 200, "coef0": 0.5, "degree": 3, "epsilon": 0.5, "gamma": "scale", "kernel": "linear", "shrinking": true, "tol": 0.001}
