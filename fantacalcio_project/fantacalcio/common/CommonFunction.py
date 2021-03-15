@@ -3,8 +3,8 @@ import numpy as np
 from sklearn import preprocessing
 from tensorflow.python.keras import Sequential
 from tensorflow.python.keras.layers import Dense, Dropout, Activation
-from keras import backend as k
-
+from keras import backend as k 
+from keras.layers import LSTM
 
 class CommonFunction:
     base_path = os.path.dirname(__file__)
@@ -52,6 +52,22 @@ class CommonFunction:
         n_hidden = 14
         n_output = 1
         model.add(Dense(dense, input_shape=(n_input,), activation=activation_init))  # hidden neurons, 1 layer
+        model.add(Dropout(rate))
+        model.add(Dense(
+            units=units))
+        model.add(Dense(n_output))
+        model.add(Activation(activation))
+        model.compile(loss='mean_squared_error', optimizer=optimizer,
+                      metrics=[CommonFunction.__coefficient_determination__])
+        model.summary()
+        return model
+
+    @staticmethod
+    def __baseline_model_LSTM__(dense=100, activation_init='relu', rate=0.5, units=50, activation='relu', optimizer='adam'):
+        model = Sequential()
+        n_input = 13 
+        n_output = 1
+        model.add(LSTM(dense, input_shape=(n_input,), activation=activation_init))  # hidden neurons, 1 layer
         model.add(Dropout(rate))
         model.add(Dense(
             units=units))

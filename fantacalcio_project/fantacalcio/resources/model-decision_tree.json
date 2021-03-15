@@ -1,0 +1,1 @@
+{"ccp_alpha": 0.02, "criterion": "mse", "max_features": "auto", "min_impurity_decrease": 0.002, "min_samples_leaf": 2, "min_samples_split": 5, "min_weight_fraction_leaf": 0.002, "random_state": true, "splitter": "random"}

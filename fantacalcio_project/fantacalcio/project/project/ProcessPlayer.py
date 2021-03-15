@@ -1,5 +1,5 @@
-from fantacalcio.common.ThreadPool import ThreadPool
-from fantacalcio.project.project.PredictiveOperation import PredictiveOperation
+from common.ThreadPool import ThreadPool
+from project.project.PredictiveOperation import PredictiveOperation
 
 
 class ProcessPlayer:

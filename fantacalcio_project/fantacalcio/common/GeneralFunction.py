@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from fantacalcio.common.CommonFunction import CommonFunction
+from common.CommonFunction import CommonFunction
 
 
 class GeneralFunction(ABC):

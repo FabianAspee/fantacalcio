@@ -9,7 +9,7 @@ np.random.seed(458)
 
 
 class LSTMModel:
-
+ 
     def __init__(self, n_input=10):
         self.__lstm_model__ = Sequential()
         self.__n_inputs = n_input

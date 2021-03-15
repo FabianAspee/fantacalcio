@@ -35,9 +35,7 @@ class SearchBestModel(GeneralFunction):
 
     async def start(self, info_player, name_player):
         use_all_processor = -1
-        tasks = [self.keras_regressor_grid(info_player, name_player, use_all_processor),
-                 self.decision_tree_regressor_grid(info_player, name_player, use_all_processor),
-                 self.random_forest_regressor_grid(info_player, name_player, use_all_processor)]
+        tasks = [self.lstm_regressor_grid(info_player, name_player, use_all_processor)]
         await asyncio.wait(tasks)
 
         return ['Keras', 'DecisionTree', 'RandomForest']
@@ -60,15 +58,14 @@ class SearchBestModel(GeneralFunction):
     async def decision_tree_regressor_grid(self, info_player, name_player, num_processor):
         print('decision')
         decision_tree_model = DecisionTreeRegressor()
-        parameters = {'criterion': ('mse', 'mae', 'poisson'),
+        parameters = {'criterion': ('mse', 'mae'),
                       'splitter': ('best', 'random'),
                       'min_samples_split': [2, 4, 5, 7, 8],
                       'min_samples_leaf': [2, 4, 5, 7, 8, 100, 120, 200],
                       'min_weight_fraction_leaf': [0.002, 0.005],
                       'max_features': ('auto', 'log2'),
                       'random_state': [True, False],
-                      'min_impurity_decrease': [0.02, 0.05, 0.002],
-                      'presort': 'auto',
+                      'min_impurity_decrease': [0.02, 0.05, 0.002], 
                       'ccp_alpha': [0.02, 0.05, 0.002]}
         x_train, x_target, _, _ = self.__get_information_for_model__(info_player)
         get_best_params = CommonGridSearch.get_best_params(decision_tree_model, parameters, x_train, x_target,
